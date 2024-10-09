@@ -7,6 +7,12 @@ android {
     namespace = "com.example.kalkulatortersimplesedunia"
     compileSdk = 34
 
+    buildFeatures{
+        //noinspection DataBindingWithoutKapt
+        dataBinding=true
+        viewBinding=true
+    }
+
     defaultConfig {
         applicationId = "com.example.kalkulatortersimplesedunia"
         minSdk = 24
@@ -36,12 +42,13 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
+    implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
