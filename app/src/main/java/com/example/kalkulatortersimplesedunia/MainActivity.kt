@@ -46,12 +46,24 @@ class MainActivity : AppCompatActivity() {
         }
         binding.wolu.setOnClickListener {
             binding.textviewoperasibilangan.append("8")
-            }
+        }
         binding.songo.setOnClickListener {
             binding.textviewoperasibilangan.append("9")
-            }
+        }
         binding.nol.setOnClickListener {
             binding.textviewoperasibilangan.append("0")
-            }
+        }
+        binding.tambah.setOnClickListener {
+            binding.textviewoperasibilangan.append("+")
+        }
+        binding.kurang.setOnClickListener {
+            binding.textviewoperasibilangan.append("-")
+        }
+        binding.kali.setOnClickListener {
+            binding.textviewoperasibilangan.append("×")
+        }
+        binding.bagi.setOnClickListener {
+            binding.textviewoperasibilangan.append("/")
+        }
         }
     }
