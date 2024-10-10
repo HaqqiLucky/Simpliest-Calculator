@@ -11,6 +11,7 @@ import com.example.kalkulatortersimplesedunia.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private val viewModel: MtkBahagiaModel by viewModels()
+    private var angka = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -64,6 +65,19 @@ class MainActivity : AppCompatActivity() {
         }
         binding.bagi.setOnClickListener {
             binding.textviewoperasibilangan.append("/")
+        }
+//        binding.minuspositif.setOnClickListener { //ini masih salah
+//
+//            var teksSekarangbuatminuspositif = binding.textviewoperasibilangan.text.toString()
+//            if (teksSekarangbuatminuspositif.startsWith("-")){
+//                teksSekarangbuatminuspositif = teksSekarangbuatminuspositif.substring(1)
+//            } else {
+//                teksSekarangbuatminuspositif = "-$teksSekarangbuatminuspositif"
+//            }
+//            binding.textviewoperasibilangan.setText(teksSekarangbuatminuspositif)
+//        }
+        binding.clear.setOnClickListener {
+            binding.textviewoperasibilangan.setText("")
         }
         }
     }
